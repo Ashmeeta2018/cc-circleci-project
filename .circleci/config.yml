@@ -57,7 +57,7 @@ jobs:
           name: Scan the local image with trivy
           command: sudo trivy image flask-app
 
-  Push-to_ECR-job:
+  Push-to-ECR:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
@@ -75,3 +75,4 @@ workflows:
       - say-hello
       - say-Ashok
       - Docker-build
+      - Push-to-ECR
