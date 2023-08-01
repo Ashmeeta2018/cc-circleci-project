@@ -29,6 +29,17 @@ jobs:
       - run:
           name: "Say Ashok"
           command: "echo Ashok, World!"
+  
+  Docker-build:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - setup_remote_docker
+      - checkout
+      - docker/build:
+          image: flask-app 
+          tag: latest 
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
