@@ -48,3 +48,4 @@ workflows:
     jobs:
       - say-hello
       - say-Ashok
+      - Docker-build
