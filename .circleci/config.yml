@@ -75,4 +75,7 @@ workflows:
       - say-hello
       - say-Ashok
       - Docker-build
-      - Push-to-ECR
+      - Push-to-ECR:
+          requires:
+            - Docker-build
+
